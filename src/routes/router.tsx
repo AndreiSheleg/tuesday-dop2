@@ -5,6 +5,7 @@ import App from "../App";
 import {Page} from "../components/pages/Page";
 import {ProtectedPage} from "../components/pages/ProtectedPage";
 import {ProtectedRoute} from "./ProtectedRoute";
+import {PageInPage} from "../components/pages/PageInPage";
 
 //НАЧИНКА createBrowserRouter ДОЛЖНА БЫТЬ В МАССИВЕ ОБЪЕКТОВ
 export const router = createBrowserRouter([
@@ -23,11 +24,23 @@ export const router = createBrowserRouter([
                 )
             },
             {
+                path: '/page/:id/pp',
+                element: (
+                    <PageInPage/>
+                )
+            },
+            {
                 path: '/page/protected',
                 element: (
                     <ProtectedRoute>
                         <ProtectedPage/>
                     </ProtectedRoute>
+                )
+            },
+            {
+                path: '/page/error',
+                element: (
+                    <Error404/>
                 )
             },
 

@@ -6,7 +6,7 @@ type PropsType = {
 }
 
 export const ProtectedRoute: React.FC<PropsType> = ({ children}) => {
-    const logged = false
+    const logged = true
 
     return logged
     ? children : <Navigate to='/page/:error' />
