@@ -1,5 +1,8 @@
 import {useEffect, useState} from "react";
 
+/**
+ * я измеряю ширину экрана
+ */
 export function useWindowSize() {
     const [windowSize, setWindowSize] = useState(0)
     useEffect(() => {
